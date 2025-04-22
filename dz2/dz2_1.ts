@@ -24,13 +24,13 @@ type GradeStatus = 'pass' | 'fail';
 // * Для круга – принимает один параметр `(radius: number)` и возвращает площадь круга (`number`).
 // * Для прямоугольника – принимает два параметра `(width: number, height: number)` и возвращает площадь прямоугольника (`number`).
 // * Для треугольника – принимает три параметра `(a: number, b: number, c: number)` и возвращает площадь по формуле Герона (`number`).
-type CalculateArea ={
+type CalculateArea = {
     (radius: number): number;
     (width: number, height: number): number;
     (a: number, b: number, c: number): number;
 };
 
-const calculateArea = function(..args: number[]): number {
+const calculateArea: CalculateArea = function(..args: number[]): number {
     const argCount = args.length;
 
     switch(argCount) {
